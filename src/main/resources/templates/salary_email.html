@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Notification</title>
+</head>
+<body style="background-color: #f9f9f9; color: #333; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0;">
+<div style="max-width: 600px; margin: 40px auto; padding: 24px; background-color: white; border-radius: 12px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); border: 1px solid #e0e0e0;">
+    <!-- Company Logo -->
+    <img src="https://yourdomain.com/logo.png"
+         alt="Company Logo"
+         style="display: block; margin: 0 auto 24px auto; width: 150px;">
+
+    <!-- Header -->
+    <h2 style="text-align: center; color: #4A90E2;">Salary Credited Notification</h2>
+
+    <!-- Greeting -->
+    <p style="font-size: 16px;">Dear <strong><span th:text="${firstName}">Employee</span></strong>,</p>
+
+    <!-- Message Body -->
+    <p style="font-size: 16px; line-height: 1.5;">
+        We are pleased to inform you that your salary for the month of
+        <strong><span th:text="${salaryMonth}">May</span> / <span th:text="${salaryYear}">2025</span></strong>
+        has been successfully credited by <strong><span th:text="${institution}">Your Institution</span></strong>.
+    </p>
+
+    <!-- Salary Info Box -->
+    <div style="background-color: #f0f8ff; padding: 20px; border-radius: 8px; margin: 20px 0; text-align: center;">
+        <p style="margin: 8px 0; font-size: 18px;">
+            <strong>Amount:</strong> <span style="color: #4A90E2;" th:text="${salaryAmount}">USD 1,500.00</span>
+        </p>
+        <p style="margin: 8px 0; font-size: 18px;">
+            <strong>Employee ID:</strong> <span th:text="${employeeId}">EMP123456</span>
+        </p>
+    </div>
+
+    <!-- Footer Message -->
+    <p style="font-size: 14px; color: #555; text-align: center;">
+        Thank you for your continued dedication and hard work.
+    </p>
+
+    <!-- Optional Call to Action -->
+    <div style="text-align: center; margin-top: 24px;">
+        <a href="http://yourapp.com/employee/dashboard"
+           style="padding: 10px 20px; background-color: #4A90E2; color: white; text-decoration: none; border-radius: 6px;">
+            View Details
+        </a>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer style="text-align: center; margin: 24px 0; color: #999; font-size: 13px;">
+    &copy; <span th:text="${companyName}">Your Company</span> <span>2025</span>. All rights reserved.
+</footer>
+</body>
+</html>
